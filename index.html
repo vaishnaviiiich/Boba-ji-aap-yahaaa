@@ -3,14 +3,231 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#090611" />
-  <title>GENGAR.EXE — Your laptop. My rules.</title>
-  <meta property="og:image" content="https://bolt.new/static/og_default.png">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:image" content="https://bolt.new/static/og_default.png">
+  <title>Gengar - Unpaid Tenant in Your Laptop</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div id="app"></div>
-  <script type="module" src="/script.js"></script>
+  <div class="scroll-progress-bar" id="scroll-progress"></div>
+
+  <div class="site-shell">
+    <header class="topbar">
+      <div class="brand">
+        <span class="brand-mark">GE</span>
+        <span>GENGAR.EXE</span>
+      </div>
+
+      <nav class="nav-links">
+        <a href="#desktop">Desktop</a>
+        <a href="#lore">Field Notes</a>
+        <a href="#timeline">Old Myths</a>
+      </nav>
+
+      <div class="top-actions">
+        <button class="ghost-btn" id="sound-btn" type="button">Sound: On</button>
+        <button class="ghost-btn" id="mood-btn" type="button">Mood: Sarcastic</button>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero" id="home">
+        <div class="reveal">
+          <div class="eyebrow">Session Status // Low Battery, High Haunting</div>
+          <h1>Your laptop.<br><span>My temporary home.</span></h1>
+          <p class="hero-copy">
+            A ghost Pokemon moved into your background processes. It doesn't pay rent, it laughs when your code throws a null pointer exception, and it brought along thirty years of eerie franchise lore.
+          </p>
+
+          <div class="hero-buttons">
+            <button class="primary-btn" id="scroll-to-desktop" type="button">Inspect the machine</button>
+            <button class="ghost-btn" id="sanity-check-btn" type="button">Check trainer sanity</button>
+          </div>
+
+          <div class="hero-status">
+            <span class="status-dot"></span>
+            <span>Running quietly. Fan speed: aggressively loud.</span>
+          </div>
+        </div>
+
+        <div class="hero-art reveal" id="gengar-art" role="button" tabindex="0" aria-label="Click Gengar to hear his thoughts">
+          <div class="gengar">
+            <div class="ear left"></div>
+            <div class="ear right"></div>
+            <div class="body"></div>
+            <div class="eyes">
+              <div class="eye"></div>
+              <div class="eye"></div>
+            </div>
+            <div class="mouth"></div>
+            <div class="teeth"></div>
+            <div class="hand left"></div>
+            <div class="hand right"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-block" id="desktop">
+        <div class="section-head reveal">
+          <div class="eyebrow">Internal Workspace</div>
+          <h2>Desktop Workspace</h2>
+          <p>A few lightweight applications. Most of them won't help you study, but they are here anyway.</p>
+        </div>
+
+        <div class="desktop-box reveal">
+          <div class="desktop-nav">
+            <span>lavender-town-network // host: student-pc</span>
+            <span id="clock">00:00:00</span>
+          </div>
+
+          <div class="apps-grid">
+            <button class="app-card" data-open="lore">
+              <span class="app-code">01</span>
+              <span class="app-name">Pokedex Notes</span>
+              <span class="app-desc">Uncomfortable entries</span>
+            </button>
+            <button class="app-card" data-open="terminal">
+              <span class="app-code">02</span>
+              <span class="app-name">Terminal</span>
+              <span class="app-desc">Mock command line</span>
+            </button>
+            <button class="app-card" data-open="notes">
+              <span class="app-code">03</span>
+              <span class="app-name">Daily Regrets</span>
+              <span class="app-desc">College and bug reports</span>
+            </button>
+            <button class="app-card" data-open="game">
+              <span class="app-code">04</span>
+              <span class="app-name">Bug Chaser</span>
+              <span class="app-desc">Tiny distraction game</span>
+            </button>
+          </div>
+
+          <div class="status-grid">
+            <div class="status-panel">
+              <h3>Gengar's Current Observation</h3>
+              <p id="mood-message">He is judging your choice of variable names.</p>
+            </div>
+            <div class="status-panel">
+              <h3>Semester Survival Odds</h3>
+              <p>Estimated at roughly 42%.</p>
+              <div class="progress-track">
+                <div class="progress-bar"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-block" id="lore">
+        <div class="section-head reveal">
+          <div class="eyebrow">Pokedex Lore</div>
+          <h2>The Uncomfortable Truths</h2>
+          <p>The Pokemon world is cheerful on the surface until you actually stop to read the biological field guides.</p>
+        </div>
+
+        <div class="cards-grid">
+          <article class="minimal-card reveal">
+            <span class="tag">Entry 094</span>
+            <h3>Room Temperature Drops</h3>
+            <p>
+              Whenever a room drops by ten degrees for no reason, Gengar is standing right behind you absorbing body heat. If your room is already freezing, he might just be trying to save on heating bills.
+            </p>
+          </article>
+
+          <article class="minimal-card reveal">
+            <span class="tag">Theory 002</span>
+            <h3>Clefable's Old Shadow</h3>
+            <p>
+              Gengar and Clefable share matching silhouettes, weights, and ear designs. The running theory is that Gengar is simply Clefable's departed spirit, or its shadow finally getting tired of following it around.
+            </p>
+          </article>
+
+          <article class="minimal-card reveal">
+            <span class="tag">Evolution Logic</span>
+            <h3>The Trade Evolution</h3>
+            <p>
+              Haunter only becomes a Gengar when sent through a trade cable. Nothing forces a ghost to consolidate physical matter quite like the emotional sting of being traded away for an Alakazam.
+            </p>
+          </article>
+
+          <article class="minimal-card reveal">
+            <span class="tag">Kanto Incident</span>
+            <h3>Lavender Town Tower</h3>
+            <p>
+              Seven stories of gravestones and grief in a game targeted at eight-year-olds. The Silph Scope was required just to confirm that yes, the building was genuinely full of restless spirits.
+            </p>
+          </article>
+
+          <article class="minimal-card reveal">
+            <span class="tag">Gigantamax Record</span>
+            <h3>A Mouth to Nowhere</h3>
+            <p>
+              In Galar, Gigantamax Gengar's open mouth is officially categorized as a direct doorway to the afterlife. Looking inside is said to make you hear the voices of people you miss, which feels unnecessary for an exhibition gym match.
+            </p>
+          </article>
+
+          <article class="minimal-card reveal">
+            <span class="tag">Biological Note</span>
+            <h3>The Frosty Tongue</h3>
+            <p>
+              Haunter licks things to steal life energy. Victims experience uncontrollable shivering that lasts until they faint. An uncomfortable hazard for anyone exploring dark caves without repels.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section-block" id="timeline">
+        <div class="section-head reveal">
+          <div class="eyebrow">Historical Footnotes</div>
+          <h2>A Quick Timeline of Disasters</h2>
+          <p>Key moments where ancient creatures altered geography and trainers had to clean up afterward.</p>
+        </div>
+
+        <div class="notes-stream">
+          <div class="note-item reveal">
+            <span class="note-time">Beginning</span>
+            <div class="note-content">
+              <h4>Arceus Makes Everything, Then Regrets Part of It</h4>
+              <p>The universe is created alongside Dialga and Palkia. Giratina turns out to be too unruly for the main realm and gets sent to the Distortion World, where normal gravity is merely a suggestion.</p>
+            </div>
+          </div>
+
+          <div class="note-item reveal">
+            <span class="note-time">150 Years Ago</span>
+            <div class="note-content">
+              <h4>The Brass Tower Incident</h4>
+              <p>Lightning hits a wooden tower in Ecruteak City. Three unnamed Pokemon perish in the flames, Ho-Oh brings them back with upgraded weather abilities, and tourists still talk about it a century later.</p>
+            </div>
+          </div>
+
+          <div class="note-item reveal">
+            <span class="note-time">Modern Era</span>
+            <div class="note-content">
+              <h4>Mewtwo Decides Science Was a Mistake</h4>
+              <p>Researchers on Cinnabar Island attempt to improve upon Mew's genetics. Mewtwo promptly levels the laboratory, takes a boat out to an island fortress, and questions the philosophical nature of existence.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>GENGAR.EXE // student build</span>
+      <span>No Pokemon were harmed during compilation</span>
+    </footer>
+  </div>
+
+  <div class="window-layer" id="window-layer">
+    <div class="window-modal">
+      <div class="modal-bar">
+        <span id="window-title">App</span>
+        <button class="close-btn" id="close-window" type="button">X</button>
+      </div>
+      <div class="modal-body" id="window-content"></div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast"></div>
+
+  <script src="script.js"></script>
 </body>
 </html>
